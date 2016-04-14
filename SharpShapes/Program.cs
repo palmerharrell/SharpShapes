@@ -10,7 +10,16 @@ namespace SharpShapes
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("testing...");
+      // Display Menu in console
+      Console.WriteLine("");
+      Console.WriteLine("Select a shape:");
+      Console.WriteLine("1. Circle");
+      Console.WriteLine("2. Square");
+      Console.WriteLine("3. Rhombus");
+      Console.WriteLine("4. Cube");
+      Console.WriteLine("5. Cylinder");
+      string inputTest = Console.ReadLine();
+      Console.WriteLine("User input: {0}", inputTest);
     }
   }
 }
