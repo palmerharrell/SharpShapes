@@ -14,14 +14,14 @@ namespace SharpShapesTests
       Assert.IsInstanceOfType(simple, typeof(Shape));
     }
 
-    //[TestMethod]
-    //public void TestShapeArea()
-    //{
-    //  Shape simple = new Shape();
-    //  simple.width = 2;
-    //  simple.height = 2;
-    //  Assert.IsTrue(simple.calculateArea() == 4);
-    //}
+    [TestMethod]
+    public void TestShapeArea()
+    {
+      Shape simple = new Shape();
+      simple.width = 2;
+      simple.height = 2;
+      Assert.IsTrue(simple.calculateArea() == 4);
+    }
 
     //[TestMethod]
     //public void TestShapeVolume()
