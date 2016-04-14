@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace SharpShapes
 {
-  class Program
+  public class Shape
   {
-    static void Main(string[] args)
-    {
-      Console.WriteLine("testing...");
-    }
+
   }
 }
