@@ -69,5 +69,32 @@ namespace SharpShapesTests
       square.width = 2;
       Assert.IsTrue(square.calculateArea() == 4);
     }
+
+    [TestMethod]
+    public void TestCircleArea()
+    {
+      Circle circle = new Circle();
+      circle.radius = 1;
+      Assert.IsTrue(circle.calculateArea() == Math.PI);
+    }
+
+    [TestMethod]
+    public void TestCylinderVolume()
+    {
+      Cylinder cylinder = new Cylinder();
+      cylinder.radius = 1;
+      cylinder.height = 1;
+      Assert.IsTrue(cylinder.calculateVolume() == Math.PI);
+    }
+
+    [TestMethod]
+    public void TestPyramidVolume()
+    {
+      Pyramid pyramid = new Pyramid();
+      pyramid.length = 1;
+      pyramid.width = 1;
+      pyramid.height = 3;
+      Assert.IsTrue(pyramid.calculateVolume() == 1);
+    }
   }
 }

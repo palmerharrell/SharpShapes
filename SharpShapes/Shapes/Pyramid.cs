@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace SharpShapes.Shapes
 {
-  public class Pyramid
+  public class Pyramid : Shape
   {
-    public double length;
-    public double width;
-    public double height;
+    //public double length;
+    //public double width;
+    //public double height;
+    public override double calculateVolume()
+    {
+      return (length * width * height) / 3;
+    }
   }
 }
