@@ -83,8 +83,8 @@ namespace SharpShapesTests
     {
       Cylinder cylinder = new Cylinder();
       cylinder.radius = 1;
-      cylinder.height = 1;
-      Assert.IsTrue(cylinder.calculateVolume() == Math.PI);
+      cylinder.height = 5;
+      Assert.IsTrue(cylinder.calculateVolume() == 5 * Math.PI);
     }
 
     [TestMethod]
