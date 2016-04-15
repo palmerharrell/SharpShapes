@@ -8,9 +8,12 @@ namespace SharpShapes.Shapes
 {
   public class Cylinder : Shape
   {
+    public Cylinder()
+    {
+      this.sides = 3;
+    }
     public override double calculateVolume()
     {
-      // V = πr2h
       return Math.PI * radius * radius * height;
     }
   }

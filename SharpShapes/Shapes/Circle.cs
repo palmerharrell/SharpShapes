@@ -8,6 +8,14 @@ namespace SharpShapes.Shapes
 {
   public class Circle : Shape
   {
-    //double radius;
+    public Circle()
+    {
+      this.sides = 1;
+    }
+
+    public override double calculateArea()
+    {
+      return Math.PI * radius * radius;
+    }
   }
 }

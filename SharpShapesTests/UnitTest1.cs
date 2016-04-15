@@ -96,5 +96,33 @@ namespace SharpShapesTests
       pyramid.height = 3;
       Assert.IsTrue(pyramid.calculateVolume() == 1);
     }
+
+    [TestMethod]
+    public void TestPyramidSides()
+    {
+      Pyramid pyramid = new Pyramid();
+      Assert.IsTrue(pyramid.sides == 5);
+    }
+
+    [TestMethod]
+    public void TestCircleSides()
+    {
+      Circle circle = new Circle();
+      Assert.IsTrue(circle.sides == 1);
+    }
+
+    [TestMethod]
+    public void TestCylinderSides()
+    {
+      Cylinder cylinder = new Cylinder();
+      Assert.IsTrue(cylinder.sides == 3);
+    }
+
+    [TestMethod]
+    public void TestSquareSides()
+    {
+      Square square = new Square();
+      Assert.IsTrue(square.sides == 4);
+    }
   }
 }

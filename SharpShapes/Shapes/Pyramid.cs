@@ -8,9 +8,10 @@ namespace SharpShapes.Shapes
 {
   public class Pyramid : Shape
   {
-    //public double length;
-    //public double width;
-    //public double height;
+    public Pyramid()
+    {
+      this.sides = 5;
+    }
     public override double calculateVolume()
     {
       return (length * width * height) / 3;
