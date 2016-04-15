@@ -11,6 +11,7 @@ namespace SharpShapes
     static void Main(string[] args)
     {
       // Display Menu in console
+      //Console.Clear(); // Doesn't work in git bash
       Console.WriteLine("");
       Console.WriteLine("Select a shape:");
       Console.WriteLine("1. Circle");
@@ -18,6 +19,7 @@ namespace SharpShapes
       Console.WriteLine("3. Rhombus");
       Console.WriteLine("4. Cube");
       Console.WriteLine("5. Cylinder");
+      Console.Write("> ");
       string inputTest = Console.ReadLine();
       Console.WriteLine("User input: {0}", inputTest);
     }

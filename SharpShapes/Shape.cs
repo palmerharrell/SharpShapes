@@ -11,9 +11,15 @@ namespace SharpShapes
     public double width;
     public double height;
     public double depth;
+
     public double calculateArea()
     {
       return width*height;
+    }
+
+    public double calculateVolume()
+    {
+      return width*height*depth;
     }
   }
 }
