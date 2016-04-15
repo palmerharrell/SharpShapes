@@ -40,15 +40,24 @@ namespace SharpShapes
             Circle circle = new Circle();
             circle.radius = dimension;
             Console.WriteLine("");
-            Console.WriteLine("Circle of Radius {0}", circle.radius);
-            Console.WriteLine("--------------------");
+            Console.WriteLine("Circle with radius of {0}", circle.radius);
+            Console.WriteLine("-----------------------");
             Console.WriteLine("A circle has {0} side.", circle.sides);
             Console.WriteLine("The area of this circle is {0}.", circle.calculateArea());
             shapeSelected = true;
             break;
           case 2:
             Console.WriteLine("");
-            Console.WriteLine("Square selected");
+            Console.WriteLine("Enter the width of the square:");
+            Console.Write("> ");
+            dimension = Convert.ToDouble(Console.ReadLine());
+            Square square = new Square();
+            square.width = dimension;
+            Console.WriteLine("");
+            Console.WriteLine("Square with width of {0}", square.width);
+            Console.WriteLine("----------------------");
+            Console.WriteLine("A square has {0} sides.", square.sides);
+            Console.WriteLine("The area of this square is {0}.", square.calculateArea());
             shapeSelected = true;
             break;
           case 3:
@@ -69,24 +78,7 @@ namespace SharpShapes
         }
       }
 
-      //if (inputTest == "2")
-      //{
-      //  Square square = new Square();
-      //  Console.Write("Enter Width of square: ");
-      //  double width = Convert.ToDouble(Console.ReadLine());
-      //  square.width = width;
-      //  double squareArea = square.calculateArea();
-      //  Console.WriteLine("The area of the square is {0}", squareArea);
-      //}
-      //else if(inputTest == "1")
-      //{
-      //  Circle circle = new Circle();
-      //  Console.Write("Enter Radius of circle: ");
-      //  double radius = Convert.ToDouble(Console.ReadLine());
-      //  circle.radius = radius;
-      //  Console.WriteLine("circle.radius: {0}", circle.radius);
-      //  // Area method not written yet
-      //}
+      
       //else if (inputTest == "5")
       //{
       //  Cylinder cylinder = new Cylinder();
