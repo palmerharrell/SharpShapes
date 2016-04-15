@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace SharpShapes.Shapes
 {
-  public class Square
+  public class Square : Shape
   {
-    public double width;
+    //public double width;
+    public override double calculateArea()
+    {
+      return width * width;
+    }
   }
 }

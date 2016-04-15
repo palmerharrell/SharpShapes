@@ -30,10 +30,10 @@ namespace SharpShapesTests
     }
 
     [TestMethod]
-    public void TestRhombusType()
+    public void TestPyramidType()
     {
-      Rhombus rhombus = new Rhombus();
-      Assert.IsInstanceOfType(rhombus, typeof(Rhombus));
+      Pyramid pyramid = new Pyramid();
+      Assert.IsInstanceOfType(pyramid, typeof(Pyramid));
     }
 
     [TestMethod]
@@ -62,6 +62,12 @@ namespace SharpShapesTests
       Assert.IsTrue(simple.calculateVolume() == 30);
     }
 
-    
+    [TestMethod]
+    public void TestSquareArea()
+    {
+      Square square = new Square();
+      square.width = 2;
+      Assert.IsTrue(square.calculateArea() == 4);
+    }
   }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SharpShapes.Shapes;
 
 namespace SharpShapes
 {
@@ -22,6 +23,16 @@ namespace SharpShapes
       Console.Write("> ");
       string inputTest = Console.ReadLine();
       Console.WriteLine("User input: {0}", inputTest);
+
+      if(inputTest == "2")
+      {
+        Square square = new Square();
+        Console.Write("Enter Width of square: ");
+        double width = Convert.ToDouble(Console.ReadLine());
+        square.width = width;
+        double squareArea = square.calculateArea();
+        Console.WriteLine("The area of the square is {0}", squareArea);
+      }
     }
   }
 }

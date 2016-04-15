@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SharpShapes.Shapes
+namespace SharpShapes
 {
-  public class Rhombus
+  public class Pyramid
   {
-
+    public double length;
+    public double width;
+    public double height;
   }
 }
