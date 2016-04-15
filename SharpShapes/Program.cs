@@ -62,7 +62,17 @@ namespace SharpShapes
             break;
           case 3:
             Console.WriteLine("");
-            Console.WriteLine("Cylinder selected");
+            Console.WriteLine("Enter Height and radius of cylinder, seperated by a comma: ");
+            Console.Write("> ");
+            dimensions = Console.ReadLine().Split(',');
+            Cylinder cylinder = new Cylinder();
+            cylinder.height = Convert.ToDouble(dimensions[0]);
+            cylinder.radius = Convert.ToDouble(dimensions[1]);
+            Console.WriteLine("");
+            Console.WriteLine("Cylinder with height of {0} and radius of {1}", cylinder.height, cylinder.radius);
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("A cylinder has {0} sides.", cylinder.sides);
+            Console.WriteLine("The volume of this cylinder is {0}.", cylinder.calculateVolume());
             shapeSelected = true;
             break;
           case 4:
