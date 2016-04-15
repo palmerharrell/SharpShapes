@@ -11,6 +11,7 @@ namespace SharpShapes
     public double width { get; set; }
     public double height { get; set; }
     public double depth { get; set; }
+    public double radius { get; set; }
 
     public virtual double calculateArea()
     {

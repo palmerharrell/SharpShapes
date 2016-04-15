@@ -8,6 +8,6 @@ namespace SharpShapes.Shapes
 {
   public class Circle
   {
-    double radius;
+    //double radius;
   }
 }
