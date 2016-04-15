@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace SharpShapes.Shapes
 {
-  public class Cylinder
+  public class Cylinder : Shape
   {
-    public double height;
-    public double radius;
+    public override double calculateVolume()
+    {
+      // V = πr2h
+      return Math.PI * radius * radius * height;
+    }
   }
 }

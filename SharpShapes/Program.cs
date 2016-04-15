@@ -22,7 +22,7 @@ namespace SharpShapes
       Console.WriteLine("5. Cylinder");
       Console.Write("> ");
       string inputTest = Console.ReadLine();
-      Console.WriteLine("User input: {0}", inputTest);
+      //Console.WriteLine("User input: {0}", inputTest);
 
       if(inputTest == "2")
       {
@@ -32,6 +32,27 @@ namespace SharpShapes
         square.width = width;
         double squareArea = square.calculateArea();
         Console.WriteLine("The area of the square is {0}", squareArea);
+      }
+      else if(inputTest == "1")
+      {
+        Circle circle = new Circle();
+        Console.Write("Enter Radius of circle: ");
+        double radius = Convert.ToDouble(Console.ReadLine());
+        circle.radius = radius;
+        Console.WriteLine("circle.radius: {0}", circle.radius);
+        // Area method not written yet
+      }
+      else if (inputTest == "5")
+      {
+        Cylinder cylinder = new Cylinder();
+        Console.Write("Enter Height and radius of cylinder, seperated by a comma: ");
+        string input = Console.ReadLine();
+        string[] dimensions = input.Split(',');
+        cylinder.height = Convert.ToDouble(dimensions[0]);
+        cylinder.radius = Convert.ToDouble(dimensions[1]);
+        double cylinderVolume = cylinder.calculateVolume();
+        Console.WriteLine("The volume of the cylinder is {0}", cylinderVolume);
+
       }
     }
   }

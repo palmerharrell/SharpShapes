@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SharpShapes.Shapes
 {
-  public class Circle
+  public class Circle : Shape
   {
     //double radius;
   }
