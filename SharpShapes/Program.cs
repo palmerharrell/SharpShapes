@@ -32,7 +32,7 @@ namespace SharpShapes
       {
         switch (shapeChoice)
         {
-          case 1:
+          case 1: // Circle
             Console.WriteLine("");
             Console.WriteLine("Enter the radius of the circle:");
             Console.Write("> ");
@@ -41,12 +41,11 @@ namespace SharpShapes
             circle.radius = dimension;
             Console.WriteLine("");
             Console.WriteLine("Circle with radius of {0}", circle.radius);
-            Console.WriteLine("-----------------------");
             Console.WriteLine("A circle has {0} side.", circle.sides);
             Console.WriteLine("The area of this circle is {0}.", circle.calculateArea());
             shapeSelected = true;
             break;
-          case 2:
+          case 2: // Square
             Console.WriteLine("");
             Console.WriteLine("Enter the width of the square:");
             Console.Write("> ");
@@ -55,12 +54,11 @@ namespace SharpShapes
             square.width = dimension;
             Console.WriteLine("");
             Console.WriteLine("Square with width of {0}", square.width);
-            Console.WriteLine("----------------------");
             Console.WriteLine("A square has {0} sides.", square.sides);
             Console.WriteLine("The area of this square is {0}.", square.calculateArea());
             shapeSelected = true;
             break;
-          case 3:
+          case 3: // Cylinder
             Console.WriteLine("");
             Console.WriteLine("Enter Height and radius of cylinder, seperated by a comma: ");
             Console.Write("> ");
@@ -70,14 +68,23 @@ namespace SharpShapes
             cylinder.radius = Convert.ToDouble(dimensions[1]);
             Console.WriteLine("");
             Console.WriteLine("Cylinder with height of {0} and radius of {1}", cylinder.height, cylinder.radius);
-            Console.WriteLine("-----------------------------------------");
             Console.WriteLine("A cylinder has {0} sides.", cylinder.sides);
             Console.WriteLine("The volume of this cylinder is {0}.", cylinder.calculateVolume());
             shapeSelected = true;
             break;
-          case 4:
+          case 4: // Pyramid
             Console.WriteLine("");
-            Console.WriteLine("Pyramid selected");
+            Console.WriteLine("Enter Length, Width and Height of pyramid, seperated by commas: ");
+            Console.Write("> ");
+            dimensions = Console.ReadLine().Split(',');
+            Pyramid pyramid = new Pyramid();
+            pyramid.length = Convert.ToDouble(dimensions[0]);
+            pyramid.width = Convert.ToDouble(dimensions[1]);
+            pyramid.height = Convert.ToDouble(dimensions[2]);
+            Console.WriteLine("");
+            Console.WriteLine("Pyramid with length of {0}, width of {1} and height of {2}", pyramid.length, pyramid.width, pyramid.height);
+            Console.WriteLine("A pyramid has {0} sides.", pyramid.sides);
+            Console.WriteLine("The volume of this pyramid is {0}.", pyramid.calculateVolume());
             shapeSelected = true;
             break;
           default:
@@ -87,20 +94,6 @@ namespace SharpShapes
             break;
         }
       }
-
-      
-      //else if (inputTest == "5")
-      //{
-      //  Cylinder cylinder = new Cylinder();
-      //  Console.Write("Enter Height and radius of cylinder, seperated by a comma: ");
-      //  string input = Console.ReadLine();
-      //  string[] dimensions = input.Split(',');
-      //  cylinder.height = Convert.ToDouble(dimensions[0]);
-      //  cylinder.radius = Convert.ToDouble(dimensions[1]);
-      //  double cylinderVolume = cylinder.calculateVolume();
-      //  Console.WriteLine("The volume of the cylinder is {0}", cylinderVolume);
-
-      //}
     }
   }
 }
